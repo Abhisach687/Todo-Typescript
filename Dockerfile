@@ -1,24 +1,7 @@
-# Use an official Node.js runtime as the base image
-FROM node:14
-
-# Set the working directory in the container to /app
+FROM node:16-alpine
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
-COPY package.json ./
-COPY package-lock.json ./
-
-# Install project dependencies
-RUN npm install
-
-# Copy the rest of the project files to the working directory
 COPY . .
+RUN npm install
+EXPOSE 8080
 
-# TypeScript compiler
-RUN npm run build
-
-# Make port 80 available to the outside of the Docker container
-EXPOSE 80
-
-# Run the application when the Docker container launches
-CMD ["npm", "start"]
+CMD ["npm", "start"];

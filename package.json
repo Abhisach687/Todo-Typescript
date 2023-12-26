@@ -5,6 +5,6 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "http-server -c-1"
+    "start": "http-server -c-1 -a 0.0.0.0"
   }
 }
