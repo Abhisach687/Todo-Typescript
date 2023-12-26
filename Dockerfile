@@ -21,4 +21,4 @@ RUN npm run build
 EXPOSE 80
 
 # Run the application when the Docker container launches
-CMD ["node", "dist/script.js"]
+CMD ["npm", "start"]
