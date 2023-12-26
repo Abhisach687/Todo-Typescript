@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="todo-container">
+      <div class="header">
+        <h1>Task Manager</h1>
+      </div>
+
+      <div class="content">
+        <div class="form-wrapper">
+          <div class="search-wrapper">
+            <h3>Search Tasks</h3>
+            <form>
+              <input
+                type="text"
+                placeholder="Search tasks"
+                class="search-todos"
+              />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+
+          <div class="add-todo-wrapper">
+            <h3>Add New Task</h3>
+            <form>
+              <input
+                type="text"
+                placeholder="Add task title"
+                class="add-todo-title"
+              />
+              <textarea
+                rows="3"
+                placeholder="Add description"
+                class="add-todo-desc"
+              ></textarea>
+              <button type="submit">Add Task</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="filter-todos">
+          <button class="filter selected" data-filter="all">All</button>
+          <button class="filter" data-filter="unfinished">Unfinished</button>
+          <button class="filter" data-filter="finished">Finished</button>
+        </div>
+
+        <div class="todos-wrapper">
+          <!-- Todo items added dynamically here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="dist/script.js"></script>
+  </body>
+</html>
